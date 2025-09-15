@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- font awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+  </head>
+
+  <body>
+    <div class="layout">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-profile">
+          <i class="fa-solid fa-user"></i>
+          <p class="sidebar-username">To Do List App</p>
+        </div>
+        <nav class="sidebar-nav">
+          <ul>
+            <li id="all-tasks" data-section="all-tasks"><a id="all-tasks-text" data-section="all-tasks"><i class="fa-solid fa-list"></i> All Tasks</a></li>
+            <li id="completed-tasks" data-section="completed-tasks"><a id="completed-tasks-text" data-section="completed-tasks"><i class="fa-solid fa-check"></i> Completed Tasks</a></li>
+            <li id="due-today" data-section="due-today"><a id="due-today-text" data-section="due-today"><i class="fa-solid fa-calendar-days"></i> Due Today</a></li>
+            <li id="due-week" data-section="due-week"><a id="due-week-text" data-section="due-week"><i class="fa-solid fa-calendar-week"></i> Due This Week</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <div class="content">
+        <!-- Sub-header -->
+        <section class="sub-header">
+          <div class="sub-header-content">
+            <h1 id="sub-title">Task List</h1>
+            <div class="sub-header-info">
+              <p id="date">Monday, September 15</p>
+              <button class="ellipsis-button"><i class="fa-solid fa-ellipsis"></i></button>
+            </div>
+          </div>
+        </section>
+        
+
+        <!-- main -->
+        <main>
+          <section id="all-tasks" class="main-section">
+            <div id="task-list" class="container-task-list">
+              <div class="task-item">
+                <div>
+                  <h3>To Do List Application</h3>
+                  <p>Your task is to design a web page that allows users to
+                    add tasks with a Title and a Description, display them in a task list, and manage them with
+                    action buttons.
+                  </p>
+                  <button id="mark-done" class="task-item-btn">Mark as Done</button>
+                  <button id="edit" class="task-item-btn">Edit</button>
+                  <button id="delete" class="task-item-btn">Delete</button>  
+                </div>
+                <div>
+                  <button class="favorite-btn"><i class="fa-regular fa-star"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Add task -->
+            <div id="container-add-task-list" class="container-add-task-list">
+              <button id="add-task-btn" class="add-task-btn"><i class="fa-solid fa-plus"></i>Add Task</button>
+            </div>
+          </section>
+
+          <!-- Completed tasks -->
+          <section id="completed-tasks" class="main-section" style="display: none; ">
+            <div id="task-item-undone" class="task-item-undone">
+
+            </div>
+          
+          </section>
+          
+          <!-- Due today -->
+          <section id="due-today" class="main-section" style="display:none">
+            <h1 class="Maintainance">Under Maintainance! :></h1>
+          </section>
+          <!-- Due this week -->
+          <section id="due-week" class="main-section" style="display:none">
+            <h1 class="Maintainance">Under Maintainance! :></h1>
+          </section>
+        </main>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

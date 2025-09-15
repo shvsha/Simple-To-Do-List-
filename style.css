@@ -1,0 +1,258 @@
+/* all */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier New', Courier, monospace;
+}
+.layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: ivory;
+}
+button{
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 300px;
+  background-color: #000000;
+  background: linear-gradient(90deg, #000000  0%, #151708 100%);
+  color: white;
+  padding: 20px;
+}
+.sidebar-profile {
+  margin-top: 20px;
+  display: flex;
+}
+.fa-solid.fa-user {
+  font-size: 25px;
+  margin-right: 20px;
+}
+.sidebar-username {
+  align-self: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+.sidebar-nav {
+  margin-top: 40px;
+}
+.sidebar-nav ul {
+  list-style-type: none;
+}
+.sidebar-nav ul li:first-child {
+  border-top: 1px solid white;
+}
+.sidebar-nav li {
+  padding: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+.sidebar-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  
+}
+.sidebar-nav li:hover {
+  background-color: #373b41;
+  cursor: pointer;
+}
+.sidebar-nav li.active {
+  background-color: #a7aab1ff;
+}
+.sidebar-nav li.active a {
+  color: black;
+}
+
+
+/* content */
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Sub-header */
+.sub-header {
+  background: linear-gradient(90deg, #151708 0%, #35393f 100%);
+  color: white;
+  height: 160px;
+  width: 100%;
+  display: flex;
+  align-items: end;
+}
+.sub-header-content {
+  margin-left: 70px;
+  margin-bottom: 20px;
+}
+.sub-header h1 {
+  font-size: 35px;
+}
+.sub-header-info {
+  display: flex;
+  gap: 850px;
+  margin-top: 10px;
+  font-size: 15px;
+}
+.ellipsis-button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+.fa-solid.fa-ellipsis {
+  color: white;
+  cursor: pointer;
+  font-size: 23px;
+  padding: 5px 18px;
+  transition: background-color 0.3s, color 0.3s;
+}
+.fa-solid.fa-ellipsis:hover {
+  background-color: #303438;
+}
+.fa-solid.fa-ellipsis:active {
+  background-color: #26292c;
+}
+
+/* Task list */
+.container-task-list {
+  padding: 20px 20px 0px 20px;
+  background-color: ivory;
+  color: white;
+  font-size: 18px;
+}
+.container-task-list div {
+  margin-left: 5px;
+  margin-bottom: 15px;
+}
+.container-task-list h3 {
+  font-size: 27px;
+  color: black;
+  font-weight: bold;
+}
+.container-task-list p {
+  color: black;
+  margin: 10px 0;
+}
+.container-task-list button {
+  margin-right: 10px;
+  font-size: 15px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+}
+.task-item-btn {
+  background-color: #131518;
+}
+.container-task-list .task-item-btn:hover {
+  background-color: #484e56;
+}
+.container-task-list .task-item-btn:active {
+  background-color: #696d73;
+  color: white;
+}
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 5px;
+  border-bottom: 1px solid rgb(216, 207, 207);
+}
+.favorite-btn {
+  background: none;
+  border: none;
+}
+.fa-regular.fa-star {
+  font-size: 25px;
+  color: gray;
+}
+.favorite-btn, .fa-regular.fa-star:hover {
+  background-color: transparent;
+  color: gold;
+}
+.favorite-btn, .fa-regular.fa-star:active {
+  color:rgb(205, 175, 3);
+}
+
+/* Add Task */
+.container-add-task-list {
+  cursor: pointer;
+  margin: 0px 25px;
+  margin-right: 20px;
+  padding: 45px;
+  background-color: ivory;
+  color: white;
+  margin-top: -15px;
+  border-bottom: 1px solid rgb(216, 207, 207);
+  transition: background-color 0.3s, color 0.3s;
+}
+.container-add-task-list div {
+  margin-left: 5px;
+  margin-bottom: 15px;
+}
+.container-add-task-list button {
+  background-color: transparent;
+  color: blue;
+  margin-left: -55px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+.container-add-task-list:hover {
+  background-color: rgb(212, 208, 208);
+}
+.container-add-task-list:active {
+  background-color: rgb(168, 167, 167);
+  color: white;
+}
+.add-task-btn i {
+  margin-right: 35px;
+  margin-left: 10px
+}
+
+/* Mark as undone */
+.task-item-undone {
+  padding: 0px 10px 0px 10px;
+  background-color: ivory;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+}
+.task-item-undone h3 {
+  font-size: 27px;
+  color: black;
+  font-weight: bold;
+}
+.task-item-undone p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+.task-item-undone button {
+  border: none;
+  background-color: #131518;
+  padding: 11px 18px;
+  margin: 10px 10px 10px 0;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+.task-item-undone button:hover {
+  background-color: #484e56;
+  cursor: pointer;
+}
+.task-item-undone button:active {
+  background-color: #696d73;
+}
+.task-item-undone-content {
+  padding: 20px 20px 0px 20px;
+  border-bottom: 1px solid rgb(216, 207, 207);
+}
+
+/* Maintainance */
+.Maintainance {
+  text-align: center;
+  margin-top: 200px;
+}
